@@ -18,8 +18,8 @@ steps:
     image: golang:1.15.6-buster
     pull: if-not-exists
     commands:
-      - go build
-      - go test
+      - go build ./...
+      - go test ./...
     environment:
       GOPROXY: https://goproxy.io
       GO111MODULE: on
