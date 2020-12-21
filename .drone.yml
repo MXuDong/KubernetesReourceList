@@ -7,7 +7,7 @@ kind: pipeline
 type: kubernetes
 name: for test
 
-metadta:
+metadata:
   namespace: drones
   labels:
     app: drone
