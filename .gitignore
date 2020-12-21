@@ -1,0 +1,8 @@
+# The git ingore file
+
+# The idea file
+*.iml
+.idea/
+
+# The mac environemnt
+# todo

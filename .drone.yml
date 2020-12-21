@@ -1,0 +1,29 @@
+# The drone config file
+# Author: A-Donga
+# Desc:
+#   This file is config of drone, for pipeline and others.
+
+kind: pipeline
+type: kubernetes
+name: for test
+
+metadta:
+  namespace: drones
+  labels:
+    app: drone
+    type: drone-create
+
+steps:
+  - name: try to build
+    image: golang:1.15.6-buster
+    pull: if-not-exists
+    commands:
+      - go build
+      - go test
+    environment:
+      GOPROXY: https://goproxy.io
+      GO111MODULE: on
+
+trigger:
+  event:
+    - push
