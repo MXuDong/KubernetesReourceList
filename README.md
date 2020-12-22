@@ -1,8 +1,7 @@
 # The krl
 krl : kubernetes resource list.
 
-this tool will list all resource from kubernetes.
-
+this tool will list all resource from kubernetes in the table format.
 ## Usage:
 
 `todo`
